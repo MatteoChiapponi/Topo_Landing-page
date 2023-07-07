@@ -9,7 +9,7 @@ const Navbar = () => {
         <Link to={routes.home}>Home</Link>
         <Link to={routes.aboutUs}>About Us</Link>
         <Link to={routes.ourServices}>Our Services</Link>
-        <Link to={routes.ourProyects}>Our Proyects</Link>
+        <Link to={routes.ourProjects}>Our Projects</Link>
         <button id='toggle' onClick={() => {}}>
           change theme
         </button>
