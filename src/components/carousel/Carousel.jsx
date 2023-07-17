@@ -6,7 +6,6 @@ const Carousel = () => {
     'src/assets/img/images.jpeg',
     'src/assets/img/images_bn.jpg',
     'hola',
-    'chau',
   ]
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -31,10 +30,13 @@ const Carousel = () => {
         return (
           <div
             className='carousel-item'
-            style={{ transform: `translate(-${currentIndex * 100}%)` }}
+            style={{
+              transform: `translate(-${currentIndex * 100}%)`,
+              backgroundImage: `${item}`,
+            }}
             key={index}
           >
-            <img src={item} />
+            <h4>Descripción</h4>
           </div>
         )
       })}
