@@ -2,14 +2,20 @@ import { useEffect, useState } from 'react'
 import './carousel.css'
 
 const Carousel = () => {
-  const data = ['src/assets/img/images.jpeg', 'src/assets/img/images_bn.jpg']
-  const [currentIndex, setCUrrentIndex] = useState(0)
+  const data = [
+    'src/assets/img/images.jpeg',
+    'src/assets/img/images_bn.jpg',
+    'hola',
+    'chau',
+  ]
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   const carouselScroll = () => {
-    if (currentIndex === data.length - 1) {
-      return setCUrrentIndex(0)
+    if (currentIndex < data.length - 1) {
+      setCurrentIndex(currentIndex + 1)
+    } else if (currentIndex === data.length - 1) {
+      setCurrentIndex(0)
     }
-    return setCUrrentIndex(currentIndex - 1)
   }
 
   useEffect(() => {
@@ -28,7 +34,7 @@ const Carousel = () => {
             style={{ transform: `translate(-${currentIndex * 100}%)` }}
             key={index}
           >
-            <img src={item}/>
+            <img src={item} />
           </div>
         )
       })}

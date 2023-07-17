@@ -1,6 +1,7 @@
 import Card from '../../components/card/Card'
 import './ourServices.css'
 const OurServices = () => {
+  const url = '/src/assets/img/images.jpeg'
   return (
     <main>
       <h1 className='title'>nuestros servicios</h1>
@@ -11,26 +12,10 @@ const OurServices = () => {
         unde aspernatur.
       </p>
       <section className='services-container'>
-        <Card
-          title={'titulo de pureba'}
-          img='/src/assets/img/images.jpeg'
-          text={'texto de prueba'}
-        />
-        <Card
-          title={'titulo de pureba'}
-          img='/src/assets/img/images.jpeg'
-          text={'texto de prueba'}
-        />
-        <Card
-          title={'titulo de pureba'}
-          img='/src/assets/img/images.jpeg'
-          text={'texto de prueba'}
-        />
-        <Card
-          title={'titulo de pureba'}
-          img='/src/assets/img/images.jpeg'
-          text={'texto de prueba'}
-        />
+        <Card title={'titulo de pureba'} img={url} text={'texto de prueba'} />
+        <Card title={'titulo de pureba'} img={url} text={'texto de prueba'} />
+        <Card title={'titulo de pureba'} img={url} text={'texto de prueba'} />
+        <Card title={'titulo de pureba'} img={url} text={'texto de prueba'} />
       </section>
     </main>
   )
