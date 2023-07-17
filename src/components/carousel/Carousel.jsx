@@ -32,7 +32,7 @@ const Carousel = () => {
             className='carousel-item'
             style={{
               transform: `translate(-${currentIndex * 100}%)`,
-              backgroundImage: `${item}`,
+              backgroundImage: `url(${item})`,
             }}
             key={index}
           >
