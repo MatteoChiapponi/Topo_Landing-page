@@ -11,11 +11,12 @@ const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const carouselScroll = () => {
+    console.log(data[currentIndex]);
     if (currentIndex < data.length - 1) {
       setCurrentIndex(currentIndex + 1)
-    } else if (currentIndex === data.length - 1) {
-      setCurrentIndex(0)
+      return
     }
+    setCurrentIndex(0)
   }
 
   useEffect(() => {
@@ -34,7 +35,7 @@ const Carousel = () => {
             style={{ transform: `translate(-${currentIndex * 100}%)` }}
             key={index}
           >
-            <img src={item} />
+            <img src={item} alt='' />
           </div>
         )
       })}
