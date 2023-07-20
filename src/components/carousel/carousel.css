@@ -6,6 +6,9 @@
 }
 
 .carousel-item {
+    background-repeat: no-repeat;
+    background-size: contain; /* "cover" estira la img para que ocupe todo el espacio */
+    background-position: center;
     height: 20rem;
     min-width: 100%;
     width: 100%;
