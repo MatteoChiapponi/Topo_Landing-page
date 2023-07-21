@@ -1,0 +1,22 @@
+.service_article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    height: auto;
+    margin: auto;
+    border-radius: 5%;
+    padding: 0.5rem;
+    gap: 10px;
+}
+
+.service_article h4 {
+    font-size: x-large;
+    text-transform:uppercase;
+}
+
+.service_article img {
+    border: 5px solid;
+    border-color: brown;
+    border-radius: 5%;
+}

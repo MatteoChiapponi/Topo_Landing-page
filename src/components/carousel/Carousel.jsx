@@ -3,14 +3,14 @@ import './carousel.css'
 
 const Carousel = () => {
   const data = [
+    'imagen',
     'src/assets/img/images.jpeg',
     'src/assets/img/images_bn.jpg',
-    'hola',
   ]
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const carouselScroll = () => {
-    console.log(data[currentIndex]);
+    //console.log(data[currentIndex]);
     if (currentIndex < data.length - 1) {
       setCurrentIndex(currentIndex + 1)
       return
@@ -37,7 +37,8 @@ const Carousel = () => {
             }}
             key={index}
           >
-            <h4>Descripción</h4>
+            <h4>Titulo</h4>
+            <p>Descripción</p>
           </div>
         )
       })}
