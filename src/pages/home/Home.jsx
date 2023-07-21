@@ -1,25 +1,31 @@
 import './home.css'
-<<<<<<< HEAD
-import Carousel from '../../components/carousel/Carousel';
-import sendWhatsappMessagge from '../../utils/sendMessage';
-
-const Home = () => {
-  sendWhatsappMessagge()
-=======
 import Carousel from '../../components/carousel/Carousel'
+import ServiceCard from '../../components/serviceCard/ServiceCard'
+import { serviceData } from '../../utils/serviceCardData'
+import sendWhatsappMessagge from '../../utils/sendMessage'
 
 const Home = () => {
-  console.log('home')
->>>>>>> 9ed33a23c91ba075b217b709edff38e40591f6ec
+  //sendWhatsappMessagge()
   return (
     <main>
-      <p>home</p>
+      <h1>Proyectos Topográficos Groma</h1>
       <Carousel />
-        <img
-          className='whatsapp-logo'
-          src='src\assets\img\whatsapp-logo-icon.jpg'
-          alt='WhatsApp logo'
-        />
+      <h2>Nuestros servicios</h2>
+      <section className='services_section'>
+        {serviceData.map((item) => (
+          <ServiceCard
+            key={item.id}
+            image={item.image}
+            title={item.title}
+            description={item.description}
+          />
+        ))}
+      </section>
+      <img
+        className='whatsapp-logo'
+        src='src\assets\img\whatsapp-logo-icon.jpg'
+        alt='WhatsApp logo'
+      />
     </main>
   )
 }

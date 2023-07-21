@@ -8,6 +8,7 @@ const Navbar = () => {
   return (
     <header>
       <nav>
+        <img src="src\assets\img\groma_topografia_logo.png" alt="Logo" />
         <Link to={routes.home}>Home</Link>
         <Link to={routes.aboutUs}>About Us</Link>
         <Link to={routes.ourServices}>Our Services</Link>
